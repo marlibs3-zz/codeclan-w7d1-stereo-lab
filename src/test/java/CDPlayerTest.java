@@ -14,18 +14,33 @@ public class CDPlayerTest {
     }
 
     @Test
-    public void cangetMakeAndModel(){
-        assertEquals("Denon", cdplayer.getMake());
-        assertEquals("D-M40", cdplayer.getModel());
+    public void canGetMakeAndModel(){
+        assertEquals("Panasonic", cdplayer.getMake());
+        assertEquals("SC-HC297", cdplayer.getModel());
     }
 
     @Test
-    public void cansetMakeAndModel(){
+    public void canSetMakeAndModel(){
         cdplayer.setMake("DENON");
         cdplayer.setModel("AAAAAAGGGGHHH");
         assertEquals("DENON", cdplayer.getMake());
         assertEquals("AAAAAAGGGGHHH", cdplayer.getModel());
     }
 
+    @Test
+    public void canSetNumOfCDs(){
+        cdplayer.setNumOfCDs(2);
+        assertEquals(2, cdplayer.getNumOfCDs());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("You are listening to All Hail West Texas!", cdplayer.play("All Hail West Texas"));
+    }
+
+    @Test
+    public void canConnect(){
+        assertEquals("CD player is now connected.", cdplayer.connect());
+    }
 
 }

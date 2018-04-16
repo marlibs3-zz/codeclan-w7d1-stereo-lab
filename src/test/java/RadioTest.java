@@ -14,13 +14,13 @@ public class RadioTest {
     }
 
     @Test
-    public void cangetMakeAndModel(){
+    public void canGetMakeAndModel(){
         assertEquals("Denon", radio.getMake());
         assertEquals("D-M40", radio.getModel());
     }
 
     @Test
-    public void cansetMakeAndModel(){
+    public void canSetMakeAndModel(){
         radio.setMake("DENON");
         radio.setModel("AAAAAAGGGGHHH");
         assertEquals("DENON", radio.getMake());
